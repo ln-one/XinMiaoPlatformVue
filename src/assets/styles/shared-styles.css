@@ -1,0 +1,74 @@
+/* 页面标题统一样式 */
+.auth-header {
+    text-align: center;
+    margin: 15px 0 40px;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.auth-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.auth-header h1 {
+    font-size: 36px;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin: 25px 0 12px;
+    background: linear-gradient(90deg, #29eac4, #3bd9f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.header-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    max-width: 700px;
+    margin: 12px auto 0;
+    line-height: 1.7;
+}
+
+/* 响应式设计 */
+@media (min-width: 1440px) {
+    .auth-header h1 {
+        font-size: 40px;
+    }
+
+    .header-subtitle {
+        font-size: 19px;
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .auth-header h1 {
+        font-size: 46px;
+    }
+
+    .header-subtitle {
+        font-size: 21px;
+        max-width: 850px;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-header h1 {
+        font-size: 30px;
+    }
+
+    .header-subtitle {
+        font-size: 16px;
+        max-width: 550px;
+    }
+}

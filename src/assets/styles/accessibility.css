@@ -1,0 +1,63 @@
+/* 无障碍性增强样式 */
+:root {
+    --focus-ring-color: #42b983;
+    --focus-ring-width: 3px;
+}
+
+/* 键盘焦点 */
+*:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: 2px;
+}
+
+/* 跳转链接 */
+.skip-to-content {
+    position: fixed;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    z-index: 9999;
+    transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+    top: 8px;
+}
+
+/* ARIA 提示 */
+[aria-required="true"] {
+    border-color: var(--accent-color);
+}
+
+[aria-invalid="true"] {
+    border-color: var(--error-color);
+}
+
+/* 颜色对比度增强 */
+.dark-mode {
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.85);
+    --accent-color: #5ccfb1;
+}
+
+/* 动画减少 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 高对比度模式 */
+@media (forced-colors: active) {
+    :root {
+        --accent-color: ButtonText;
+        --focus-ring-color: ButtonText;
+    }
+}

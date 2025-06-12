@@ -1,0 +1,36 @@
+/* 主题切换过渡 */
+.theme-transition {
+    transition:
+        background-color var(--transition-normal) var(--easing-standard),
+        color var(--transition-normal) var(--easing-standard),
+        border-color var(--transition-normal) var(--easing-standard),
+        box-shadow var(--transition-normal) var(--easing-standard);
+}
+
+/* 组件过渡 */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity var(--transition-normal) var(--easing-standard);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* 页面切换过渡 */
+.page-enter-active,
+.page-leave-active {
+    transition: transform var(--transition-normal) var(--easing-standard),
+        opacity var(--transition-normal) var(--easing-standard);
+}
+
+.page-enter-from {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.page-leave-to {
+    opacity: 0;
+    transform: translateX(-20px);
+}
