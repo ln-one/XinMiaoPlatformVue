@@ -1,14 +1,17 @@
-# XinMiao Campus Platform
+# 🌱 XinMiao Campus Platform
 
-## Overview
+> 📚 Backend repository: [XinMiaoSpringBoot](https://github.com/ln-one/XinMiaoSpringBoot)
+
+## 📖 Overview
 XinMiao Platform is a comprehensive campus service platform designed for freshmen students, providing a one-stop solution to help new students quickly adapt to campus life.
+This repository contains the frontend part, developed with Vue.js.
 
 ## Documentation
 For Chinese documentation, please see [中文文档](https://github.com/ln-one/XinMiaoPlatformVue/blob/main/README.zh-CN.md)
 
-## Development Guide for Newcomers
+## 💫 Development Guide for Newcomers
 
-### Prerequisites
+### 🔧 Prerequisites
 1. Install Node.js (v14.0.0 or above)
 2. Install Git
 3. Basic understanding of:
@@ -16,7 +19,7 @@ For Chinese documentation, please see [中文文档](https://github.com/ln-one/X
    - Vue.js basics
    - npm package management
 
-### Project Setup
+### ⚙️ Project Setup
 ```bash
 # 1. Clone the repository
 git clone https://github.com/your-username/XinMiaoPlatform.git
@@ -34,7 +37,7 @@ cp .env.example .env
 npm run serve
 ```
 
-### Project Structure
+### 📂 Project Structure
 ```
 src/
 │
@@ -64,7 +67,7 @@ src/
     └── index.js
 ```
 
-### Development Guidelines
+### 🛠️ Development Guidelines
 
 #### 1. Adding New Features
 1. Create a new branch
@@ -131,86 +134,35 @@ export default {
 }
 ```
 
-## Features
-- 🔐 **Account Management**
-  - Secure login/registration system
-  - Password recovery
-  - Personal information management
-  
-- 🎓 **Pre-enrollment Preparation** 
-  - Admission notice guidance
-  - Document checklist
-  - Dormitory arrangements
+## 👶 Complete Beginner's Guide
 
-- 💡 **Personalized Recommendations**
-  - Course suggestions
-  - Club recommendations 
-  - Campus activities
-
-## Technical Features
-- Vue.js & Element UI
-- Light/Dark theme support
-- Accessibility enhanced
-- Responsive design
-- RESTful API integration
-- JWT Authentication
-
-## Contributing
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## Common Issues & Solutions
-1. **NPM Install Fails**
-   - Clear npm cache: `npm cache clean -f`
-   - Delete node_modules and reinstall
-
-2. **Development Server Issues**
-   - Check port conflicts
-   - Verify Node.js version
-
-3. **API Connection Issues**
-   - Verify API endpoint in .env file
-   - Check network connectivity
-   - Verify token validity
-
-## Complete Beginner's Guide
-
-### Step 0: Absolute Basics
-1. **Command Line Basics**
-   - Press `Win + R`, type `cmd`
-   - Basic commands:
-     ```bash
-     cd foldername  # Enter folder
-     dir            # List contents
-     cd ..          # Go back
-     ```
-
-2. **Pre-installation**
-   - Disable antivirus temporarily
-   - Ensure 10GB+ free space in C:
+### 🎯 Step 0: Basic Preparation
+1. **🖥️ Computer Requirements**
+   - Windows 10 or above
+   - Minimum 8GB RAM
+   - At least 30GB free disk space
    - Stable internet connection
 
-3. **Development Tools Installation**
-   - Follow this sequence:
-     ```bash
-     # 1. Download Installers
-     > Visit official websites
-     > Click "Download" button
-     > Run installer
-     
-     # 2. Verify Installation
-     > Press Win + R
-     > Type cmd
-     > Enter these commands:
-     node -v
-     npm -v
-     git --version
-     ```
+2. **📝 Required Basic Knowledge**
+   - Basic computer operations
+   - Understanding of files and folders
+   - Ability to search for solutions online
 
-### Practice: Your First Feature
+3. **🛠️ Learning Path**
+   - HTML (1 week):
+     - Tutorial: https://www.w3schools.com/html/
+     - Focus: Tags, Forms, Div layout
+   - CSS (1 week):
+     - Tutorial: https://www.w3schools.com/css/
+     - Focus: Selectors, Box model, Flex layout
+   - JavaScript (2 weeks):
+     - Tutorial: https://www.w3schools.com/js/
+     - Focus: Variables, Functions, Arrays, Objects
+   - Vue.js (2 weeks):
+     - Tutorial: https://vuejs.org/guide/introduction.html
+     - Focus: Components, Lifecycle, Data binding
+
+### 🚀 Practice: Your First Feature
 
 1. **Setup**
    ```bash
@@ -276,3 +228,48 @@ export default {
    #    - Check browser console (F12)
    #    - Check VS Code terminal
    ```
+
+## ✨ Features
+- 🔐 **Account Management**
+  - Secure login/registration system
+  - Password recovery
+  - Personal information management
+  
+- 🎓 **Pre-enrollment Preparation** 
+  - Admission notice guidance
+  - Document checklist
+  - Dormitory arrangements
+
+- 💡 **Personalized Recommendations**
+  - Course suggestions
+  - Club recommendations 
+  - Campus activities
+
+## 🛠️ Technical Features
+- ⚡ Vue.js & Element UI
+- 🌓 Light/Dark theme support
+- ♿ Accessibility enhanced
+- 📱 Responsive design
+- 🔌 RESTful API integration
+- 🔒 JWT Authentication
+
+## 🤝 Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## ❓ Common Issues & Solutions
+1. **📦 NPM Install Fails**
+   - Clear npm cache: `npm cache clean -f`
+   - Delete node_modules and reinstall
+
+2. **🚀 Development Server Issues**
+   - Check port conflicts
+   - Verify Node.js version
+
+3. **🔌 API Connection Issues**
+   - Verify API endpoint in .env file
+   - Check network connectivity
+   - Verify token validity
