@@ -3,7 +3,8 @@
 ## Overview
 XinMiao Platform is a comprehensive campus service platform designed for freshmen students, providing a one-stop solution to help new students quickly adapt to campus life.
 ## Documentation
-For Chinese documentation, please see [中文文档](./README.zh-CN.md)
+## Documentation
+For Chinese documentation, please see [中文文档](https://github.com/ln-one/XinMiaoPlatformVue/blob/main/README.zh-CN.md)
 ## Features
 - 🔐 **Account Management**
   - Secure login/registration system
