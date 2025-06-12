@@ -160,23 +160,32 @@
 </template>
 
 <script>
+// 个人信息管理组件
+// 功能:
+// 1. 展示用户基本信息
+// 2. 允许用户编辑和更新个人资料
+// 3. 包含错误处理和加载状态
+// 4. 支持表单验证和键盘导航
+// 5. 实现响应式布局适配
+
 import { mapGetters, mapActions } from 'vuex';
 import api from '@/services/api';
 
 export default {
   name: 'ProfileView',
   data() {
+    // 组件数据
     return {
-      userData: null,
-      editData: {
-        uname: '',
-        uphone: '',
-        uemail: ''
+      userData: null,        // 用户信息
+      editData: {           // 编辑表单数据
+        uname: '',          // 用户名
+        uphone: '',         // 手机号(可选)
+        uemail: ''          // 邮箱
       },
-      loading: false,
-      globalError: null,
-      updateMessage: '',
-      updateStatus: ''
+      loading: false,       // 加载状态
+      globalError: null,    // 全局错误信息
+      updateMessage: '',    // 更新反馈信息
+      updateStatus: ''      // 更新状态(success/error)
     };
   },
   computed: {
@@ -235,6 +244,13 @@ export default {
     },
 
     handleError(error) {
+      // 错误类型识别与处理:
+      // 1. 登录相关错误
+      // 2. 权限错误
+      // 3. 会话过期
+      // 4. 服务器错误
+      // 5. 网络错误
+      
       // 增强错误类型识别
       if (error.message.includes('请先登录')) {
         this.handleInitError(error);
@@ -295,7 +311,15 @@ export default {
       }
     },
 
+    // 表单提交和验证方法
     async updateProfile() {
+      // 表单验证和提交流程:
+      // 1. 输入验证
+      // 2. 数据格式化
+      // 3. API调用
+      // 4. 错误处理
+      // 5. 成功反馈
+      
       this.loading = true;
       try {
         const uid = this.userId;
@@ -400,6 +424,14 @@ export default {
 </script>
 
 <style scoped>
+/* 样式注释:
+1. 使用CSS变量实现主题切换
+2. 实现不同分辨率响应式布局
+3. 优化用户交互动画效果
+4. 增强无障碍访问支持
+5. 支持暗色主题
+*/
+
 /* 更新基础样式以使用CSS变量 */
 .home-container {
   padding: 20px;

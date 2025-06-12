@@ -1,26 +1,36 @@
-// 保持原有正确代码不变
+// 认证模块状态管理
+// 功能:
+// 1. 用户状态管理
+// 2. 认证状态维护
+// 3. Token管理
+// 4. 错误处理
+
 import api from '../services/api';
 
 export default {
   namespaced: true,
 
+  // 状态定义
   state: {
     user: {
-      uid: null,
-      uname: '',
-      uemail: '',
-      uphone: '',
-      uregtime: '',
-      uidcard: '',
-      token: '',
-      refreshToken: '',
-      expiresAt: 0
+      // 用户基本信息
+      uid: null,          // 用户ID  
+      uname: '',         // 用户名
+      uemail: '',        // 邮箱
+      uphone: '',        // 手机号
+      uregtime: '',      // 注册时间
+      // 认证信息
+      token: '',         // 访问令牌
+      refreshToken: '',  // 刷新令牌
+      expiresAt: 0      // 过期时间
     },
     isAuthenticated: false,
     error: null
   },
 
+  // 同步状态修改
   mutations: {
+    // 更新用户信息
     SET_USER(state, payload) {
       state.user = {
         ...state.user,
@@ -28,6 +38,7 @@ export default {
       };
     },
 
+    // 更新用户个人资料
     UPDATE_USER_PROFILE(state, profileData) {
       state.user = {
         ...state.user,
@@ -35,18 +46,22 @@ export default {
       };
     },
 
+    // 设置认证状态
     SET_AUTHENTICATED(state, status) {
       state.isAuthenticated = status;
     },
 
+    // 设置错误信息
     SET_ERROR(state, error) {
       state.error = error;
     },
 
+    // 清除错误信息
     CLEAR_ERROR(state) {
       state.error = null;
     },
 
+    // 重置用户信息
     RESET_USER(state) {
       state.user = {
         uid: null,
@@ -62,7 +77,9 @@ export default {
     }
   },
 
+  // 异步操作处理
   actions: {
+    // 注册流程
     async register({ commit, dispatch }, userData) {
       commit('CLEAR_ERROR');
       try {
@@ -83,6 +100,7 @@ export default {
       }
     },
 
+    // 登录流程
     async login({ commit }, credentials) {
       commit('CLEAR_ERROR');
       try {
