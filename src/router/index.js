@@ -47,6 +47,57 @@ const routes = [
       authRequired: false,
       allowAnonymous: true
     }
+    },
+    
+    // ============= 新增入学准备模块路由 =============
+  {
+    path: '/preparation',
+    name: 'Preparation',
+    component: () => import('@/views/Preparation/Index.vue'), // 模块入口组件
+    meta: { 
+      authRequired: true,  // 继承项目认证要求
+      title: '入学准备'    // 保持标题统一风格
+    },
+    children: [
+      {
+        path: 'luggage',
+        name: 'LuggageGenerator',
+        component: () => import('@/views/Preparation/LuggageGenerator.vue'),
+        meta: { 
+          title: '行李清单',
+          breadcrumb: ['入学准备', '行李清单'] // 可选的面包屑
+        }
+      },
+      {
+        path: 'transport',
+        name: 'Transportation',
+        component: () => import('@/views/Preparation/Transportation.vue'),
+        meta: { 
+          title: '交通路线',
+          keepAlive: true // 建议地图页面缓存
+        }
+      },
+      {
+        path: 'documents',
+        name: 'Documents',
+        component: () => import('@/views/Preparation/Documents.vue'),
+        meta: { title: '入学文件' }
+      },
+      {
+        path: 'facilities',
+        name: 'Facilities',
+        component: () => import('@/views/Preparation/Facilities.vue'),
+        meta: { 
+          title: '周边设施',
+          keepAlive: true 
+        }
+      },
+      // 默认重定向到行李清单（可选）
+      {
+        path: '',
+        redirect: { name: 'LuggageGenerator' }
+      }
+    ]
   }
 ];
 
