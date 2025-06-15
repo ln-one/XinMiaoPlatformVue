@@ -1,4 +1,4 @@
-# 🌱 XinMiao Campus Platform
+# 🌱 XinMiao Campus Student Platform
 
 > 📚 Backend repository: [XinMiaoSpringBoot](https://github.com/ln-one/XinMiaoSpringBoot)
 

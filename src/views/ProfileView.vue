@@ -5,7 +5,7 @@
       跳转到主要内容
     </a>
 
-    <!-- 用户标签 -->
+    <!-- 用户标签 -->    <!-- 用户标签 -->
     <div class="user-tag">
       <i class="fas fa-user-graduate"></i>
       2023级软件工程-02班 张春冉
@@ -443,16 +443,23 @@ export default {
 }
 
 .user-tag {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(41, 234, 196, 0.1) 0%, rgba(41, 234, 196, 0.2) 100%);
+  color: #138a78;
+  font-size: 15px;
+  padding: 8px 22px 8px 30px;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
   display: flex;
   align-items: center;
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
 }
 
 .user-tag i {
   margin-right: 8px;
-  color: #3cb47e;
+  font-size: 16px;
 }
 
 .auth-header {
@@ -723,101 +730,6 @@ export default {
 .save-btn:active, .cancel-btn:active {
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* 更新媒体查询中的按钮样式 */
-@media (max-width: 600px) {
-  .cancel-btn, .save-btn {
-    padding: 12px 25px;
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .cancel-btn, .save-btn {
-    padding: 16px 35px;
-    font-size: 17px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .cancel-btn, .save-btn {
-    padding: 18px 40px;
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 2560px) {
-  .cancel-btn, .save-btn {
-    padding: 20px 45px;
-    font-size: 20px;
-  }
-}
-
-.status-message {
-  margin-top: 25px;
-  padding: 13px 16px;
-  border-radius: 8px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-}
-
-.success {
-  background-color: var(--accent-light);
-  color: var(--success-color);
-  border: 1px solid var(--success-color);
-}
-
-.error {
-  background-color: rgba(245, 108, 108, 0.1);
-  color: var(--error-color);
-  border: 1px solid var(--error-color);
-}
-
-.status-message i {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.loading-container, 
-.error-container {
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: #7f8c8d;
-  background: #f9fafb;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 30px 0;
-}
-
-.error-container {
-  color: #f56c6c;
-}
-
-.loading-container i {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #42b983;
-  animation: spin 1.5s linear infinite;
-}
-
-.error-container i {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #f56c6c;
-}
-
-.footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #7f8c8d;
-  font-size: 14px;
 }
 
 /* 删除返回按钮样式 */
