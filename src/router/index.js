@@ -53,7 +53,7 @@ const routes = [
   {
     path: '/preparation',
     name: 'Preparation',
-    component: () => import('@/views/Preparation/Index.vue'), // 模块入口组件
+    component: () => import('@/views/preparation/Index.vue'), // 模块入口组件
     meta: { 
       authRequired: true,  // 继承项目认证要求
       title: '入学准备'    // 保持标题统一风格
@@ -62,7 +62,7 @@ const routes = [
       {
         path: 'luggage',
         name: 'LuggageGenerator',
-        component: () => import('@/views/Preparation/LuggageGenerator.vue'),
+        component: () => import('@/views/preparation/LuggageGenerator.vue'),
         meta: { 
           title: '行李清单',
           breadcrumb: ['入学准备', '行李清单'] // 可选的面包屑
@@ -71,7 +71,7 @@ const routes = [
       {
         path: 'transport',
         name: 'Transportation',
-        component: () => import('@/views/Preparation/Transportation.vue'),
+        component: () => import('@/views/preparation/Transportation.vue'),
         meta: { 
           title: '交通路线',
           keepAlive: true // 建议地图页面缓存
@@ -80,13 +80,13 @@ const routes = [
       {
         path: 'documents',
         name: 'Documents',
-        component: () => import('@/views/Preparation/Documents.vue'),
+        component: () => import('@/views/preparation/Documents.vue'),
         meta: { title: '入学文件' }
       },
       {
         path: 'facilities',
         name: 'Facilities',
-        component: () => import('@/views/Preparation/Facilities.vue'),
+        component: () => import('@/views/preparation/Facilities.vue'),
         meta: { 
           title: '周边设施',
           keepAlive: true 

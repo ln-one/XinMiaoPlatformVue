@@ -179,14 +179,14 @@ export default {
       return typeColors[type] || '';
     },
     getImageUrl(type) {
-      const images = {
-        dining: require('@/assets/facilities/dining.png'),
-        shopping: require('@/assets/facilities/shopping.png'),
-        bank: require('@/assets/facilities/bank.png'),
-        medical: require('@/assets/facilities/medical.png'),
-        transport: require('@/assets/facilities/transport.png')
+      const imageMap = {
+        dining: 'https://via.placeholder.com/300x200?text=餐饮',
+        shopping: 'https://via.placeholder.com/300x200?text=购物',
+        bank: 'https://via.placeholder.com/300x200?text=银行',
+        medical: 'https://via.placeholder.com/300x200?text=医疗',
+        transport: 'https://via.placeholder.com/300x200?text=交通'
       };
-      return images[type] || require('@/assets/facilities/default.png');
+      return imageMap[type] || 'https://via.placeholder.com/300x200?text=设施';
     },
     showFacilityDetail(facility) {
       this.currentFacility = facility;
