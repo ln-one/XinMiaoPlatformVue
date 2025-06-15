@@ -4,8 +4,11 @@ import AuthView from '../views/AuthView.vue';
 import HomeView from '../views/HomeView.vue';
 import store from '../store'; // 导入 store
 import ProfileView from '../views/ProfileView.vue';
+import RecommendView from '../views/RecommendView.vue';
+import TaskPointsView from '../views/TaskPointsView.vue';
 import ResetSuccess from '../components/Auth/ResetSuccess.vue'; // 添加导入语句
 import RegisterSuccess from '../components/Auth/RegisterSuccess.vue';
+import PreparationView from '../views/preparation/PreparationView.vue';
 
 Vue.use(VueRouter);
 
@@ -27,6 +30,24 @@ const routes = [
     name: 'profile',
     component: ProfileView,
     meta: { authRequired: true }
+  },
+  {
+    path: '/recommend',
+    name: 'recommend',
+    component: RecommendView,
+    meta: { authRequired: false }
+  },
+  {
+    path: '/task-points',
+    name: 'taskPoints',
+    component: TaskPointsView,
+    meta: { authRequired: false }
+  },
+  {
+    path: '/preparation',
+    name: 'preparation',
+    component: PreparationView,
+    meta: { authRequired: false }
   },
   {
     path: '/reset-success',

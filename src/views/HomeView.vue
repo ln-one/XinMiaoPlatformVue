@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
   name: 'HomeView',
   data() {
@@ -85,10 +85,16 @@ export default {
   methods: {
     handleCardClick(title) {
       if (title === '个人信息管理') {
-      this.$router.push('/profile');
-    } else {
-      alert(`即将进入${title}功能...`);
-    }
+        this.$router.push('/profile');
+      } else if (title === '个性化推荐') {
+        this.$router.push('/recommend');
+      } else if (title === '任务积分系统') {
+        this.$router.push('/task-points');
+      } else if (title === '入学前准备') {
+        this.$router.push('/preparation');
+      } else {
+        alert(`即将进入${title}功能...`);
+      }
     }
   }
 }
